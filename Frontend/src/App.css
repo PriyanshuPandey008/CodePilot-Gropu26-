@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+}
+
+main {
+  height: 100vh;      
+  width: 100vw;       
+  padding: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;   
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 2.5rem;
+}
+
+.right {
+  width: 50%;
+  font-size: 1rem;
+  background-color: rgb(63, 61, 61);
+  height: 100%;
+  border-radius: 1rem;   
+  padding: 2rem 2rem;
+  overflow: auto;
+}
+
+.left .code {
+  height: 80vh;    
+  min-height: 400px;  
+  max-height: 90vh;
+  overflow: auto;      
+  width: 100%;
+  border-radius: 0.7rem;
+  background-color: rgb(26, 23, 23);
+}
+
+.left .code pre,
+.left .code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: rgb(26, 23, 23);
+}
+
+.left .code .review-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.8rem 1.5rem; 
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 0.5rem;
+  font-size: 1rem; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.left .code .review-button:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05); 
+}
+
+.left .code .review-button:active {
+  background-color: #003f7f; 
+  transform: scale(0.95); 
+}

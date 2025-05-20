@@ -41,7 +41,7 @@ const Signup = () => {
       localStorage.setItem('email', data.email);
 
       // Redirect to code review page
-      navigate('/code-review');
+      navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || err.message || 'An error occurred during signup');
     } finally {
@@ -64,8 +64,8 @@ const Signup = () => {
             required
             disabled={loading}
             minLength={3}
-            maxLength={20}
-            placeholder="Choose a username (3-20 characters)"
+            maxLength={10}
+            placeholder="Choose a username (3-10 characters)"
           />
         </div>
         <div className="form-group">

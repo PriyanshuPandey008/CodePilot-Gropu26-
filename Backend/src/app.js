@@ -1,6 +1,8 @@
 const express=require('express');
 const aiRoutes=require('./routes/ai.routes');
 const cors=require('cors');
+const authRoutes = require('./routes/auth.routes');
+const commentRoutes = require('./routes/comment.routes');
 
 const app=express();
 
@@ -12,4 +14,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/ai',aiRoutes);
+app.use('/api', authRoutes);
+app.use('/api/comments', commentRoutes);
+
 module.exports=app;
